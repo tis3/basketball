@@ -170,7 +170,8 @@ module.exports = {
                 loader: require.resolve('less-loader'),
                 options: {
                   importLoaders: 1,
-                  javascriptEnabled: true
+                  javascriptEnabled: true,
+                  relativeUrls: false
                 }
               },
               {

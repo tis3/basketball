@@ -1,5 +1,8 @@
 @import '~antd/dist/antd.less';
+@import './style/Mousedown.less';
+@import (css) url('https://fonts.googleapis.com/css?family=Poppins');
 @primary-color: #EE2FB0;
+@dark-primary-color: #2C0145;
 
 .ant-layout-header{
   position: fixed;
@@ -13,6 +16,49 @@
   border-bottom: none;
 }
 
+.big-title{
+  margin-top:80px;
+  font-size: 9vh;
+  color:@dark-primary-color;
+  font-family:Poppins;
+  line-height: 100%;
+  font-weight:thin;
+}
+
+.subtitle{
+  color:rgba(0, 0, 0, 0.65);
+  font-size:4.5vh;
+  font-weight: 100;
+}
+
+@media screen and (max-width:480px) {  
+  .mainImage{
+    display: none;
+  }
+
+  .big-title{
+  font-size: 8vh;
+}
+
+.subtitle{
+  font-size:4vh;
+}
+}
+
+a{
+  color:@primary-color;
+  text-decoration: underline;
+}
+.ant-btn{
+  border-radius: 50px;
+  font-weight:bold;
+}
+
+.btn-gradient{
+  background: linear-gradient(to right, @primary-color, @dark-primary-color);
+  border:none;
+}
+
 .ant-menu-horizontal{
   & > .ant-menu-item-selected{
     border-bottom-width: none;
@@ -22,6 +68,7 @@
 
   & .ant-menu-item, .ant-menu-item-active{
     border-bottom:0px !important;
+    background: transparent;
   }
 
   & .ant-menu-item::after, & .ant-menu-item::before{
@@ -34,6 +81,7 @@
     border-radius: 50%;
     content: '';
     opacity: 0;
+    z-index: -1;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;

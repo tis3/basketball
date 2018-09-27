@@ -8,7 +8,7 @@ export default class App extends Component{
     render(){
         return(
             <Layout className="layout">
-                <Header style={{ position: 'fixed', zIndex: 1 }}/>
+                <Header />
                 <Route exact path="/" component={Home}/>
             </Layout>
         )
